@@ -1,0 +1,77 @@
+.mobile-menu {
+  position: relative;
+  background-color: rgba(225, 121, 146, 1);
+  height: 100vh;
+  padding: 58px 0;
+
+  @media screen and (min-width: 560px) {
+    max-width: 480px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    fill: currentColor;
+    stroke: currentColor;
+    color: white;
+
+    top: 20px;
+    right: 32px;
+
+    &:hover,
+    &:focus {
+      color: rgba(212, 20, 67, 1);
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 186px;
+
+    margin-top: 54px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    width: 100%;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2857;
+
+    border-top: 1px solid rgba(225, 130, 152, 1);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(225, 130, 152, 1);
+    }
+  }
+
+  &__link {
+    width: 100%;
+    padding: 12px 20px;
+
+    color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      color: rgba(212, 20, 67, 1);
+    }
+  }
+}
+.button {
+  @include button;
+  padding: 12px 37px;
+
+  &__icon-arrow {
+    fill: currentColor;
+    margin-left: 14px;
+    width: 8px;
+    height: 10px;
+  }
+
+  &:hover &__icon-arrow {
+    color: aqua;
+  }
+}

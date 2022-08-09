@@ -1,0 +1,193 @@
+// slider
+.slider.slick-slider {
+  @media screen and (min-width: $tablet) {
+    max-width: 620px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 968px;
+  }
+}
+
+// content
+.slick-list {
+  overflow: hidden;
+}
+
+// track slider
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// slide
+.slick-slide {
+}
+// slide active
+.slick-slide.slick-active {
+}
+.slick-slide.slick-current {
+}
+.slick-slide.slick-center {
+}
+
+// arrows
+.slick-arrow {
+}
+.slick-arrow.slick-prev {
+}
+.slick-arrow.slick-next {
+}
+.slick-arrow.slick-disabled {
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 18px;
+}
+.slider .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: none;
+}
+
+.slider .slick-dots li.slick-active button {
+  position: relative;
+  background-image: url('../images/testimonials-home.png');
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+.slider {
+  margin-right: auto;
+  margin-left: auto;
+
+  &__img {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
+  }
+
+  &__wrap {
+    position: relative;
+    padding: 43px 60px 26px;
+    background-color: rgba(250, 250, 250, 1);
+
+    margin-bottom: 67px;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+      padding: 37px 6px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 47px 73px;
+    }
+  }
+
+  &__wrap::before,
+  &__wrap::after {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__wrap::before {
+    z-index: -1;
+    top: 30px;
+    left: 53px;
+    width: 54px;
+    height: 40px;
+    background-image: url('../images/testimonials-quote.png');
+
+    @media screen and (min-width: $tablet) {
+      top: 20px;
+      left: 6px;
+      width: 61px;
+      height: 40px;
+    }
+    @media screen and (min-width: $desktop) {
+      top: 32px;
+      left: 72px;
+      width: 54px;
+      height: 40px;
+    }
+  }
+
+  &__wrap::after {
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 34px;
+    height: 4px;
+    background-image: url('../images/testimonials-pseudo.png');
+  }
+
+  &__inner {
+    padding: 8px 12px;
+
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 29.6px,
+      #e1e1e1 29.6px,
+      #e1e1e1 30.6px
+    );
+    background-position: 0px 8px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 8px 48px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 8px 34px;
+    }
+  }
+
+  &__meta {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.55;
+    letter-spacing: 0em;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 2.1429;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.875;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  //   #e1e1e1 ,
+  //   #e1e1e1 2px,
+  //   #fafafa 2px,
+  //   #fafafa 31px
+
+  &__label {
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-bottom: 16px;
+
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 37px;
+  }
+}
